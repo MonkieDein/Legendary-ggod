@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFBFD9FE"
+    android:orientation="vertical"
+    tools:context="com.example.apple.mycopyweather.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
+
+        <ImageButton
+            android:id="@+id/weatherIconMini"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/sunny" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/Year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Year"
+                    android:inputType="number"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/Month"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Month"
+                    android:inputType="number"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/Day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Day"
+                    android:inputType="number"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textColorHint="@color/cardview_dark_background" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/Hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Hour(24)"
+                    android:inputType="number"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/Minute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Minute"
+                    android:inputType="number"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textColorHint="@color/cardview_dark_background" />
+
+                <EditText
+                    android:id="@+id/Second"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Second"
+                    android:inputType="number"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textColorHint="@color/cardview_dark_background" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/weatherDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Today, Nov 24"
+                android:textColor="@android:color/background_dark"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFBFD9FE"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/currentTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="78°"
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/background_dark"
+            android:textSize="100dp" />
+
+        <TextView
+            android:id="@+id/lowTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="60°"
+            android:textColor="@android:color/background_dark"
+            android:textSize="30dp" />
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:baselineAlignBottom="false"
+            app:srcCompat="@drawable/sunny" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/cityCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Durham, USA"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/weatherDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content_weather_reports"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>
